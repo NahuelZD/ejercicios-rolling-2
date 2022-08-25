@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Rolling-Code</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body id="cuerpoPagina">
+    <header>
+        <h1>EJERCICIOS ROLLING-CODE 08/22</h1>
+        <nav>
+            <a href="#exeSTR">Ejercicios STRINGS</a>
+        </nav>
+        <button type="button" onclick="darkMode()">Activar Modo Oscuro</button>
+    </header>
+    <section style="margin-top: 15px;">
+        <div class="box eje1">
+            <p>
+                1- Escribir un programa que solicite la edad y si es mayor de 18 años mostrar un
+                mensaje que ya puede conducir, si la edad ingresada no es un número válido
+                indicarlo en un mensaje.
+            </p>
+            <label for="ejercicio1">Ingresá tú edad: </label>
+            <input type="text" id="ejercicio1">
+            <button type="button" onclick="confirmarEdad()">Enviar</button>
+            <p id="confirmarPase"></p>
+        </div>
+
+        <div class="box eje2">
+            <p>
+                2- Escribir un programa que solicite una nota (número) de 0 a 10. Luego mostrar la calificación en un
+                alert según los siguientes rangos de nota:
+            </p>
+            <ul>
+                <li>0-2: Muy deficiente</li>
+                <li>3-4: Insuficiente</li>
+                <li>5-6: Suficiente</li>
+                <li>7: Bien</li>
+                <li>8-9: Notable</li>
+                <li>10: Sobresaliente</li>
+            </ul>
+            <p>
+                Si ingreso un número que no esté dentro del rango de 0 a 10 mostrar un mensaje de “número erróneo”. Si
+                el número ingresado no es válido mostrar el mensaje “Introduce un número válido”.
+            </p>
+            <div>
+                <label for="ejercicio2">Ingresá tú nota: </label>
+                <input type="text" id="ejercicio2">
+                <button type="button" onclick="mostrarNota()">Enviar</button>
+                <p id="confirmarNota"></p>
+            </div>
+        </div>
+
+        <div class="box eje3">
+            <p>
+                3- Realiza un script que pida cadenas de texto hasta que se pulse “cancelar”. Al salir con “cancelar”
+                deben mostrarse todas las cadenas concatenadas con un guión -.
+            </p>
+            <label for="">Ingresar Cadenas: </label>
+            <button type="button" onclick="guardarCadenas()">Ejercicio 3</button>
+            <p id="confirmarCadena"></p>
+        </div>
+
+        <div class="box eje4">
+            <p>
+                4- Realiza un script que pida números hasta que se pulse “cancelar”. Si no es un número deberá indicarse con un «alert» y seguir pidiendo números. Al salir con “cancelar” deberá indicarse la suma total de los números introducidos.
+            </p>
+            <label for="">Ingresar número a sumar: </label>
+            <button type="button" onclick="sumarNumeros()">Ejercicio 4</button>
+            <p id="confirmarSumaConfirm"></p>
+        </div>
+
+        <div class="box eje5" style="margin-bottom: 15px;">
+            <p>
+                5- Realizar una página con un script que calcule el valor de la letra de un número de DNI (Documento nacional de identidad). El algoritmo para calcular la letra del dni es el siguiente :
+            </p>
+            <ul>
+                <li>El número debe ser entre 0 y 99999999</li>
+                <li>Debemos calcular el resto de la división entera entre el número y el número 23.</li>
+                <li>Según el resultado, de 0 a 22, le corresponderá una letra de las siguientes: (T, R, W, A, G, M, Y, F, P, D, X, B, N, J, Z, S, Q, V, H, L, C, K, E).</li>
+            </ul>
+            <p> 
+                Si lo introducido no es un número deberá indicarse con un alert y volver a preguntar. Deberá de repetirse el proceso hasta que el usuario pulse «cancelar»
+            </p>
+            <label for="">Ingresar DNI: </label>
+            <button type="button" onclick="letraDNI()">Ejercicio 5</button>
+        </div>
+
+        <div class="box eje6">
+            <p>
+                6- Realiza un script que escriba una pirámide del 1 al 30 de la siguiente forma :<br>
+                1<br>
+                22<br>
+                333<br>
+                4444<br>
+                55555<br>
+                666666<br>
+                …….
+            </p>
+            <label for="">Activar ejercicio</label>
+            <button type="button" onclick="piramideNumeros()">Ejercicio 6</button>
+            <p id="escribirPiramide"></p>
+        </div>
+
+        <div class="box eje7">
+            <p>
+                7- Haz un script que escriba una pirámide inversa de los números del 1 al número que indique el usuario (no mayor de 50) de la siguiente forma : (suponiendo que indica 30).<br>
+                303030303030303030303030303030303030303030303030303030303030<br>
+                2929292929292929292929292929292929292929292929292929292929<br>
+                28282828282828282828282828282828282828282828282828282828<br>
+                …..<br>
+                333<br>
+                22<br>
+                1<br>
+            </p>
+            <label for="">Activar ejercicio 7</label>
+            <button type="button" onclick="piramideDecre()">Ejercicio 7</button>
+            <p id="invertirPiramide"></p>
+        </div>
+
+        <div class="box eje8">
+            <p>
+                8- Crea script para generar la pirámide siguiente con los números del 1 al número que indique el usuario (no mayor de 50).<br>
+                1<br>
+                12<br>
+                123<br>
+                1234<br>
+                12345<br>
+                123456<br>
+                ……
+            </p>
+            <label for="ejercicio8">Ingresá un número: </label>
+            <input type="text" id="ejercicio8" placeholder="Entre 1 y 50">
+            <button type="button" onclick="piramideCustom()">Enviar</button>
+            <p id="piramideCustom"></p>
+        </div>
+
+        <div class="box eje9">
+            <p>
+                9- Crea un script que escriba los números del 1 al 500, que indique cuáles son
+                múltiplos de 4 y de 9 y que cada 5 líneas muestre una línea horizontal. Por ejemplo :
+            </p>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4 (Múltiplo de 4)</li>
+                <li>5-</li>
+                <li>————————————————————-</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8 (Múltiplo de 4)</li>
+                <li>9 (Múltiplo de 9)</li>
+                <li>10</li>
+            </ul>
+            <button type="button" onclick="multiplosCuatroNueve()">Ejercicio 9</button>
+            <button type="button" onclick="clearNueve()">Limpiar</button>
+            <ul id="mostrarMultiplos"></ul>
+        </div>
+        <div class="box eje10">
+            <p>
+                10- Realiza un script que pida número de filas y columnas y escriba una tabla. Dentro de cada una de las celdas deberá escribirse un número consecutivo en orden descendente. Si, por ejemplo, la tabla es de 7x5 los números irán del 35 al 1.
+            </p>
+            <label for="matrixFile">Ingresá una cantidad de filas: </label>
+            <input type="text" id="matrixFile" placeholder="Filas">
+            <label for="matrixColumn">Ingresá una cantidad de columnas: </label>
+            <input type="text" id="matrixColumn" placeholder="Columnas">
+            <button type="button" onclick="activarTabla()">Activar Tabla</button>
+            <table id="mostrarTabla" style="margin-bottom: 15px;">
+
+            </table>
+        </div>
+
+        <div class="box eje11">
+            <p>
+                11- Realiza un script que pida por teclado 3 edades y 3 nombres e indique el nombre del mayor. *
+            </p>
+            <p>
+                Nota: ver funcion <a href="https://www.w3schools.com/js/js_math.asp" target="_blank">Math()</a>  
+            </p>
+            <label for="userName">Ingresá tres nombres: </label>
+            <input type="text" id="userName">
+            <label for="userAge"> Ingresá tres edades: </label>
+            <input type="text" id="userAge">
+            <button type="button" onclick="mayorEdad()">Enviar</button>
+            <p id="mostrarMayorEdad"></p>
+        </div>
+
+        <div class="box eje12">
+            <p>
+                12- Realiza un script que genere un número aleatorio entre 1 y 99.
+            </p>
+            <button type="button" onclick="randomNumber()">Generar número random</button>
+        </div>
+
+        <h2 id="exeSTR">Ejercicios con String</h2>
+
+        <div class="box eje13">
+            <p>
+                13- Realiza un script que pida un texto y lo muestre en mayúsculas.
+            </p>
+            <label for="toUpper">Ingresá un texto: </label>
+            <input type="text" id="toUpper">
+            <button type="button" onclick="mayusculas()">Enviar</button>
+            <p id="textoMayusculas"></p>
+        </div>
+
+        <div class="box eje14">
+            <p>
+                14- Realiza un script que pida una cadena de texto y lo muestre poniendo el signo – entre cada carácter sin usar el método replace. Por ejemplo, si tecleo “hola qué tal”, deberá salir “h-o-l-a- -q-u-e- -t-a-l”.
+            </p>
+            <label for="textoSTR">Ingresá un texto: </label>
+            <input type="text" id="textoSTR">
+            <button type="button" onclick="juntarChar()">Enviar</button>
+            <p id="cadenaConSignos"></p>
+        </div>
+
+        <div class="box eje15">
+            <p>
+                15- Realiza un script que cuente el número de vocales que tiene un texto.
+            </p>
+            <label for="textoVocales">Ingresá un texto: </label>
+            <input type="text" id="textoVocales">
+            <button type="button" onclick="contarVocales()">Enviar</button>
+            <p id="cantidadVocales"></p>
+        </div>
+
+        <div class="box eje16">
+            <p>
+                16- Realiza un script que pida una cadena de texto y la devuelva al revés. Es decir,
+                si tecleo “hola que tal” deberá mostrar “lat euq aloh”. 
+            </p>
+            <label for="cadenaInversa">Ingresá una cadena de texto: </label>
+            <input type="text" id="cadenaInversa">
+            <button type="button" onclick="invertirCadena()">Enviar</button>
+            <p id="mostrarCadenaInvertida"></p>
+        </div>
+
+        <div class="box eje17">
+            <p>
+                17- Realiza un script que muestre la posición de la primera vocal de un texto introducido por teclado.
+            </p>
+            <label for="vocalBusqueda">Ingresá un texto: </label>
+            <input type="text" id="vocalBusqueda">
+            <button type="button" onclick="primeraVocal()">Enviar</button>
+        </div>
+
+    </section>
+
+    <script src="/ejercicios.js"></script>
+</body>
+
+</html>
