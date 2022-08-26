@@ -230,7 +230,7 @@ const clearNueve = () => {
   mensaje.innerHTML = "";
 };
 
-// Ejercicio 10 -- TERMINAR
+// Ejercicio 10
 
 function activarTabla() {
   let filas = document.getElementById("matrixFile").value;

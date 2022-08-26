@@ -38,6 +38,10 @@ button{
     border:solid 1px black;
 }
 
+td{
+    width: 50px;
+}
+
 .styleTabla{
     margin: auto;
     width: 50%;
